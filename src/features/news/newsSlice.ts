@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import http from "../../utils/http";
 
 type newsProps = {
-  list: Array<string>,
+  list: Array<object>,
   status: string
 }
 const initialState: newsProps  = {
