@@ -6,7 +6,7 @@ import NewsItem from './NewsItem'
 
 import './News.scss'
 
-const NewsPage = () => {
+const NewsDetails = () => {
   const newsList = useAppSelector(state => state.news?.list)
   const dispatch = useAppDispatch()
   // const { id } = useParams()
@@ -17,12 +17,10 @@ const NewsPage = () => {
   },[])
 
   return (
-    <div className='NewsPage'>
-      {newsList.map((item:any) => (
-        <NewsItem key={item.id} {...item} />
-      ))}
+    <div className='NewsDetails'>
+hi
     </div>
   )
 }
 
-export default NewsPage
+export default NewsDetails

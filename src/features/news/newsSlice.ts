@@ -13,7 +13,7 @@ const initialState: newsProps  = {
 export const getNews = createAsyncThunk(
   'news/getNews',
   async () => {
-    const response = await http.get("news")
+    const response = await http.get("news/?sortBy=createdAt&order=desc")
     if(response.status === 200){
       return response.data
     }

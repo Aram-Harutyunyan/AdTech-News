@@ -1,4 +1,9 @@
+@import '../../styles/colors.scss';
+
 .Navbar {
+  top: 0;
   position: fixed;
+  text-align: center;
   width: 100%;
+  background-color: $primary-color;
 }
