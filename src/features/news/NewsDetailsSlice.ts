@@ -2,17 +2,17 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import http from "../../utils/http";
 
 type newsProps = {
-  selectedNews: Array<object>,
+  selectedNews: object,
   status: string
 }
 const initialState: newsProps  = {
-  selectedNews: [],
+  selectedNews: {},
   status: ""
 }
 
 export const getNewsDetails = createAsyncThunk(
   'news/getNewsDetails',
-  async (id:string) => {
+  async (id: string | undefined) => {
     const response = await http.get(`/news/${id}`)
     if(response.status === 200){
       return response.data
