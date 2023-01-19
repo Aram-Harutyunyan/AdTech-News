@@ -43,8 +43,8 @@ const NewsItem = (props:NewsItemProps) => {
         />
         <p>{`Author: ${author}`}</p>
         <p>{`Views: ${views}`}</p>
-        <p className='NewsContainer-Description'>{text}</p>
         <p className='NewsContainer-Date'>{`Published: ${createdAt?.slice(0,10)}`}</p>
+        <p className='NewsContainer-Description'>{text}</p>
       </div>
       <button onClick={handleClick}>
           {urlID ? 'Go Back' : 'Details'}
