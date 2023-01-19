@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react'
+import {  useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import NewsItem from './NewsItem'
 import { useAppDispatch, useAppSelector } from '../../app/hooks'
 import { getNews } from '../../features/news/newsSlice'
-import NewsItem from './NewsItem'
 
 import './News.scss'
 
