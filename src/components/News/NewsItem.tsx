@@ -1,4 +1,6 @@
 import { useNavigate, useParams } from 'react-router-dom'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 import './NewsItem.scss'
 
@@ -32,7 +34,13 @@ const NewsItem = (props:NewsItemProps) => {
   return (
     <div className='NewsContainer'>
       <div className='NewsContainer-Item'>
-        <img className='NewsContainer-Image' src={image} alt={name} />
+        <LazyLoadImage
+          effect='blur'
+          className='NewsContainer-Image'
+          width='100%'
+          src={image}
+          placeholderSrc='/img/loading.png'
+        />
         <p>{`Author: ${author}`}</p>
         <p>{`Views: ${views}`}</p>
         <p className='NewsContainer-Description'>{text}</p>
