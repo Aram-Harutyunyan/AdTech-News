@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import './NewsItem.scss'
 
 type NewsItemProps = {
@@ -20,6 +20,13 @@ const NewsItem = (props:NewsItemProps) => {
     text,
     views
   } = props
+  const navigate = useNavigate()
+  const { id: urlID } = useParams()
+
+  const handleClick = () => {
+    const redirectPath = urlID ? '/' : `news/${id}`
+    navigate(redirectPath)
+  }
 
   return (
     <div className='NewsItem'>
@@ -27,9 +34,9 @@ const NewsItem = (props:NewsItemProps) => {
       <p>{`Author: ${author}`}</p>
       <p>{`Views: ${views}`}</p>
       <p className='NewsItem-Description'>{text}</p>
-      <p className='NewsItem-Date'>{`Published: ${createdAt.slice(0,10)}`}</p>
-      <button>
-        <Link to={`/news/${id}`}>Details</Link>
+      <p className='NewsItem-Date'>{`Published: ${createdAt?.slice(0,10)}`}</p>
+      <button onClick={handleClick}>
+        {urlID ? 'Go Back' : 'Details'}
       </button>
     </div>
   )

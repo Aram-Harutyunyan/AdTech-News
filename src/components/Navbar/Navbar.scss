@@ -1,6 +1,7 @@
 @import '../../styles/colors.scss';
 
 .Navbar {
+  z-index: 1;
   top: 0;
   position: fixed;
   text-align: center;

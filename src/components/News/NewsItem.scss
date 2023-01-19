@@ -10,21 +10,26 @@
   background-color: $primary-color;
   border-radius: 10px;
   overflow-y: auto;
+
   &-Image {
     border-radius: 10px 10px 0 0;
     width: 100%;
   }
+
   &-Description {
     margin: 10px 0;
     text-align: justify;
   }
+
   &-Date {
     text-align: justify;
     color: $font-secondary;
   }
+
   p {
     padding: 0 10px;
   }
+  
   button {
     cursor: pointer;
     width: 100%;

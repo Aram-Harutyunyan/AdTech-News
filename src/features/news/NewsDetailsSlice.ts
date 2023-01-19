@@ -4,13 +4,13 @@ import http from "../../utils/http";
 type newsProps = {
   selectedNews: object,
   status: string,
-  comments: object,
+  comments: Array<object>,
   commentStatus: string,
 }
 const initialState: newsProps  = {
   selectedNews: {},
   status: "",
-  comments: {},
+  comments: [{}],
   commentStatus: "",
 }
 

@@ -9,12 +9,11 @@ import './News.scss'
 const NewsPage = () => {
   const newsList = useAppSelector(state => state.news?.list)
   const dispatch = useAppDispatch()
-  // const { id } = useParams()
-  //const [page, setPage] = useState(1)
+  const { id } = useParams()
 
   useEffect(() => {
     dispatch(getNews())
-  },[])
+  },[id])
 
   return (
     <div className='NewsPage'>

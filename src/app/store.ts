@@ -5,7 +5,7 @@ import NewsDetailsReducer from '../features/news/NewsDetailsSlice'
 export const store = configureStore({
   reducer: {
     news: newsReducer,
-    NewsDetails: NewsDetailsReducer
+    newsDetails: NewsDetailsReducer
   },
 })
 
