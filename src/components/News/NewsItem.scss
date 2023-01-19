@@ -1,16 +1,7 @@
 @import '../../styles/colors.scss';
 
-.NewsItem {
+.NewsContainer {
   position: relative;
-  color: $font-primary;
-  text-align: center;
-  width: 450px;
-  height: 600px;
-  margin: 0.5rem;
-  background-color: $primary-color;
-  border-radius: 10px;
-  overflow-y: auto;
-
   &-Image {
     border-radius: 10px 10px 0 0;
     width: 100%;
@@ -25,15 +16,29 @@
     text-align: justify;
     color: $font-secondary;
   }
-
-  p {
-    padding: 0 10px;
-  }
   
+  &-Item {
+    position: relative;
+    color: $font-primary;
+    text-align: center;
+    width: 450px;
+    height: 600px;
+    margin: 0.5rem;
+    background-color: $primary-color;
+    border-radius: 10px;
+    overflow-y: auto;
+  
+    p {
+      padding: 0 10px;
+    }
+  }
   button {
     cursor: pointer;
-    width: 100%;
     height: 35px;
-    border-radius: 0 0 0px 10px;
+    width: 450px;
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    border-radius: 0 0 10px 10px;
   }
 }

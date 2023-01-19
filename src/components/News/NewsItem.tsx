@@ -29,16 +29,19 @@ const NewsItem = (props:NewsItemProps) => {
   }
 
   return (
-    <div className='NewsItem'>
-      <img className='NewsItem-Image' src={image} alt={name} />
-      <p>{`Author: ${author}`}</p>
-      <p>{`Views: ${views}`}</p>
-      <p className='NewsItem-Description'>{text}</p>
-      <p className='NewsItem-Date'>{`Published: ${createdAt?.slice(0,10)}`}</p>
+    <div className='NewsContainer'>
+      <div className='NewsContainer-Item'>
+        <img className='NewsContainer-Image' src={image} alt={name} />
+        <p>{`Author: ${author}`}</p>
+        <p>{`Views: ${views}`}</p>
+        <p className='NewsContainer-Description'>{text}</p>
+        <p className='NewsContainer-Date'>{`Published: ${createdAt?.slice(0,10)}`}</p>
+      </div>
       <button onClick={handleClick}>
-        {urlID ? 'Go Back' : 'Details'}
+          {urlID ? 'Go Back' : 'Details'}
       </button>
     </div>
+
   )
 }
 

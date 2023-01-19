@@ -2,7 +2,7 @@
   justify-content: center;
   flex-wrap: wrap;
   display: flex;
-  margin: 50px auto;
+  margin: 60px auto;
   width: 90%;
 
   &-Comments {
@@ -14,5 +14,11 @@
     padding: 4px;
     margin-bottom: 20px;
     font-size: 24px;
+  }
+
+  .NewsContainer {
+    button {
+      bottom: 0;
+    }
   }
 }
