@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { useAppDispatch, useAppSelector } from '../../app/hooks'
-import { getNewsDetails } from '../../features/news/NewsDetailsSlice'
+import { getNewsDetails, getNewsComments } from '../../features/news/NewsDetailsSlice'
 import NewsItem from './NewsItem'
 
 import './News.scss'
@@ -14,6 +14,7 @@ const NewsDetails = () => {
 
   useEffect(() => {
     dispatch(getNewsDetails(id))
+    dispatch(getNewsComments(id))
   },[id])
 
   return (
